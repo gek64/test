@@ -1,0 +1,1 @@
+将channel作为资源，goroutine拿到可用的channel资源后占用并执行，执行完成后就通过select case选择后释放，再由下一个goroutine取得
