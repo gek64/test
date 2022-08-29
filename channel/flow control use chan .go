@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+// 会导致死锁,flowControlChan <- i 程序会卡在这里,无法到达下面回收协程通过管道返回数据的代码,从而导致死锁
+
 // 使用 flowControlChan 做流量控制
 // 控制主进程发送协程的速率
 //
